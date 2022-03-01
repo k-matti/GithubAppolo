@@ -1,0 +1,16 @@
+<div class="container">
+    <app-search (search)="onSearch($event)"></app-search>
+    <div class="search">
+        <ng-container *ngIf="(repos | async) as repos">
+            <ng-container *ngIf="repos.length > 0; else noResults ">
+                <ng-container *ngFor="let repo of repos">
+                    <app-card [repo]="repo" (select)="onRepoSelect($event)"></app-card>
+                </ng-container>
+            </ng-container>
+        </ng-container>
+    </div>
+
+    <ng-template #noResults>
+        <p>Brak wynikow</p>
+    </ng-template>
+</div>

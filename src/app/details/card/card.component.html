@@ -1,0 +1,16 @@
+<mat-card>
+    <mat-card-title-group>
+        <mat-card-title>{{repo?.node?.nameWithOwner}}</mat-card-title>
+        <mat-card-subtitle>{{repo?.node?.homepageUrl}}</mat-card-subtitle>
+        <img mat-card-md-image src='{{repo?.node?.openGraphImageUrl}}'>
+    </mat-card-title-group>
+    <mat-card-content>
+        <ul>
+            <li><b>Description:</b> {{repo?.node?.description}}</li>
+            <li><b>Created at:</b> {{repo?.node?.createdAt}}</li>
+            <li><b>Fork count:</b> {{repo?.node?.forkCount}}</li>
+            <li><b>IsArchived:</b> {{repo?.node?.isArchived}}</li>
+            <li><b>IsDisabled:</b> {{repo?.node?.isDisabled}}</li>
+        </ul>
+    </mat-card-content>
+</mat-card>

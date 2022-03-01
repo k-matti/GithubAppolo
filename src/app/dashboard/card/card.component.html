@@ -1,0 +1,9 @@
+<mat-card (click)="onRepoSelect()">
+    <mat-card-title-group>
+        <mat-card-title>{{repo?.node?.nameWithOwner}}</mat-card-title>
+        <img mat-card-md-image src="{{repo?.node?.openGraphImageUrl}}">
+    </mat-card-title-group>
+    <mat-card-content>
+        {{repo?.node?.description}}
+    </mat-card-content>
+</mat-card>
